@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şüpheli İşlem Bildirim Formu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            text-decoration: none;
+            outline: 0;
+        }
+
+        table,
+        th,
+        tr,
+        td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding: 0 3px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            vertical-align: text-top;
+        }
+
+        body {
+            background: #525659;
+            font: 12pt Garamond;
+        }
+
+        .page {
+            width: 160mm;
+            height: 267mm;
+            padding: 15mm 25mm;
+            background: #fff;
+            margin: 0 auto;
+        }
+
+        .form-header {
+            text-align: right;
+            font: 11pt "Times New Roman" !important;
+            margin-bottom: 30px;
+        }
+
+        .form-main-title {
+            text-align: center;
+            font-weight: bold;
+            display: block;
+        }
+
+        .form-table-title {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        .form-table-title span {
+            font-size: 10pt;
+            color: #555;
+        }
+
+        .checkbox {
+            margin-right: 3pt;
+            display: inline-block;
+            position: relative;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+        }
+
+        .author {
+            float: right;
+            margin-top: 50px;
+        }
+        .author b {
+            display: block;
+            width: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1 -->
+    <div class="page">
+
+        <p class="form-header">MSK-FRM-ŞİB-010-1.0</p>
+
+        <p class="form-main-title">ŞÜPHELİ İŞLEM BİLDİRİM FORMU</p>
+
+        <!-- A- FORMU DÜZENLEYEN YÜKÜMLÜ BİLGİLERİ -->
+        <p class="form-table-title">A- FORMU DÜZENLEYEN YÜKÜMLÜ BİLGİLERİ</p>
+        <table>
+            <tr>
+                <td style="width: 30%">Ad/Unvan</td>
+                <td colspan="3" style="width: 70%"></td>
+            </tr>
+            <tr>
+                <td style="width: 25%">Vergi Kimlik No</td>
+                <td style="width: 25%"></td>
+                <td style="width: 25%">TC Kimlik Numarası</td>
+                <td style="width: 25%"></td>
+            </tr>
+        </table>
+        <!-- #A- FORMU DÜZENLEYEN YÜKÜMLÜ BİLGİLERİ -->
+
+        <!-- B- BİLDİRİME İLİŞKİN BİLGİLER -->
+        <p class="form-table-title">B- BİLDİRİME İLİŞKİN BİLGİLER</p>
+        <table>
+            <tr>
+                <td style="width: 25%">Referans No</td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td style="width: 25%">Yeni veya Ek</td>
+                <td>
+                    <span class="checkbox"></span>Yeni
+                    <span class="checkbox"></span>Ek
+                </td>
+                <td>Ek ise Önceki Bildirim Referans No: ...................</td>
+            </tr>
+            <tr>
+                <td style="width: 25%">Bildirimin Aciliyeti</td>
+                <td colspan="2">
+                    <span class="checkbox"></span>Normal
+                    <span class="checkbox"></span>İvedi
+                    <span class="checkbox"></span>Çok İvedi
+                    <span class="checkbox"></span>İşlemin Ertelenmesi Talepli
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 25%">Bildirim Kategorisi</td>
+                <td colspan="2">
+                    <span class="checkbox"></span>Suç gelirlerinin aklanması
+                    <span class="checkbox"></span>Terörün Finansmanı
+                </td>
+            </tr>
+        </table>
+        <!-- #B- BİLDİRİME İLİŞKİN BİLGİLER -->
+
+        <!-- C- ŞÜPHELİ İŞLEM İLE İLGİLİ GERÇEK KİŞİ BİLGİLERİ -->
+        <p class="form-table-title">C- ŞÜPHELİ İŞLEM İLE İLGİLİ GERÇEK KİŞİ BİLGİLERİ</p>
+        <table>
+            <tr>
+                <td style="width: 35%">İşlem İle Olan Bağlantısı</td>
+                <td>
+                    <span class="checkbox"></span>İşlemi Yapan<br>
+                    <span class="checkbox"></span>Adına İşlem Yapılan<br>
+                    <span class="checkbox"></span>Dolaylı Olarak İlgili<br>
+                    <span>.....................................................................</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Kimliği sahte mi?</td>
+                <td>
+                    <span class="checkbox"></span>Evet
+                    <span class="checkbox"></span>Hayır
+                </td>
+            </tr>
+            <tr>
+                <td>Adı</td>
+                <td>$FIRST_NAME</td>
+            </tr>
+            <tr>
+                <td>Soyadı</td>
+                <td>$LAST_NAME</td>
+            </tr>
+            <tr>
+                <td>Cinsiyeti</td>
+                <td>
+                    <span class="checkbox"></span>Erkek
+                    <span class="checkbox"></span>Kadın
+                    <span class="checkbox"></span>Bilinmiyor
+                </td>
+            </tr>
+            <tr>
+                <td>T.C. Kimlik No</td>
+                <td>$TC_ID</td>
+            </tr>
+            <tr>
+                <td>Vergi Kimlik No</td>
+                <td>$TAX_ID</td>
+            </tr>
+            <tr>
+                <td>Uyruğu</td>
+                <td>$NATIONALITY</td>
+            </tr>
+            <tr>
+                <td>Anne Adı</td>
+                <td>$MOTHER_NAME</td>
+            </tr>
+            <tr>
+                <td>Baba Adı</td>
+                <td>$FATHER_NAME</td>
+            </tr>
+            <tr>
+                <td>Adresi</td>
+                <td>
+                    <span class="checkbox"></span>Ev:
+                    <br>
+                    <br>
+                    <span class="checkbox"></span>İş:
+                </td>
+            </tr>
+            <tr>
+                <td>Doğum Tarihi</td>
+                <td>$DATE_OF_BIRTH</td>
+            </tr>
+            <tr>
+                <td>Doğum Yeri</td>
+                <td>$PLACE_OF_BIRTH</td>
+            </tr>
+            <tr>
+                <td>Kimlik Belgelerine Dair Bilgiler</td>
+                <td>
+                    <span class="checkbox"></span>Nüfus Cüzdanı No:<br>
+                    <span class="checkbox"></span>Sürücü Belgesi No:<br>
+                    <span class="checkbox"></span>Pasaport No:<br>
+                    <span class="checkbox"></span>İkamet Tezkeresi No:<br>
+                </td>
+            </tr>
+            <tr>
+                <td>Telefon Numarası</td>
+                <td>
+                    <span class="checkbox"></span>Ev Telefonu:<br>
+                    <span class="checkbox"></span>Cep Telefonu: $MOBILE_PHONE<br>
+                    <span class="checkbox"></span>İş Telefonu:<br>
+                </td>
+            </tr>
+            <tr>
+                <td>Elektronik Posta Adresi</td>
+                <td>$EMAIL_ADDRESS</td>
+            </tr>
+            <tr>
+                <td>İş ve Meslek</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Varsa Ek Bilgi</td>
+                <td>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+        <!-- #C- ŞÜPHELİ İŞLEM İLE İLGİLİ GERÇEK KİŞİ BİLGİLERİ -->
+
+    </div>
+    <!-- #Page 1 -->
+
+    <br>
+
+    <!-- Page 2 -->
+    <div class="page">
+
+        <p class="form-header">MSK-FRM-ŞİB-010-1.0</p>
+
+        <!-- D- ŞÜPHELİ İŞLEM İLE İLGİLİ TÜZEL KİŞİLER İLE TÜZEL KİŞİLİĞİ OLMAYAN TEŞEKKÜLLERE DAİR BİLGİLER -->
+        <p class="form-table-title">D- ŞÜPHELİ İŞLEM İLE İLGİLİ TÜZEL KİŞİLER İLE TÜZEL KİŞİLİĞİ OLMAYAN TEŞEKKÜLLERE
+            DAİR BİLGİLER</p>
+        <table>
+            <tr>
+                <td style="width: 38%">İşlem İle Olan Bağlantısı</td>
+                <td colspan="3">
+                    <span class="checkbox"></span>Adına İşlem Yapılıyor<br>
+                    <span class="checkbox"></span>Dolaylı Olarak İlgili<br>
+                    <span>.....................................................................</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Kimliğe esas belge sahte mi? </td>
+                <td colspan="3">
+                    <span class="checkbox"></span>Evet<br>
+                    <span class="checkbox"></span>Hayır<br>
+                </td>
+            </tr>
+            <tr>
+                <td>Kuruluş Nevi</td>
+                <td colspan="3">
+                    <span class="checkbox"></span>Sermaye Şirketi
+                    <span class="checkbox"></span>Şahıs Şirketi<br>
+                    <span class="checkbox"></span>Dernek/Vakıf
+                    <span class="checkbox"></span>Diğer
+                </td>
+            </tr>
+            <tr>
+                <td>Unvanı</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>İşletme Adı</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Vergi Kimlik Numarası</td>
+                <td></td>
+                <td style="width: 20%">Sicil Numarası</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Bulunduğu Ülke</td>
+                <td></td>
+                <td>Kuruluş Tarihi</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Bulunduğu Yer (İl/İlçe)</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Adresi</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Faaliyet Konusu</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Telefon Numarası</td>
+                <td></td>
+                <td>Faks Numarası</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Elektronik Posta Adresi</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Web Sitesi</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Varsa Ek Bilgi</td>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+        <!-- #D- ŞÜPHELİ İŞLEM İLE İLGİLİ TÜZEL KİŞİLER İLE TÜZEL KİŞİLİĞİ OLMAYAN TEŞEKKÜLLERE DAİR BİLGİLER -->
+
+        <!-- E- ŞÜPHELİ İŞLEM BİLGİLERİ -->
+        <p class="form-table-title">E- ŞÜPHELİ İŞLEM BİLGİLERİ <span>(Her bir şüpheli işlem için bu alanı
+                tekrarlayınız)</span></p>
+        <table>
+            <tr>
+                <td style="width: 38%">İşlem Durumu</td>
+                <td colspan="3">
+                    <span class="checkbox"></span>Gerçekleştirilmiş
+                    <span class="checkbox"></span>Teşebbüs Aşamasında
+                </td>
+            </tr>
+            <tr>
+                <td>İşlem Tarihi</td>
+                <td colspan="3">
+                    <span class="checkbox"></span>Tek İşlem : .../.../............ <br>
+                    <span class="checkbox"></span>Çoklu İşlem : .../.../............ - .../.../............
+                </td>
+            </tr>
+            <tr>
+                <td>İşlemin Hesaba Bağlılığı</td>
+                <td colspan="3">
+                    <span class="checkbox"></span>Hesaba Bağlı
+                    <span class="checkbox"></span>Hesaba Bağlı Değil
+                </td>
+            </tr>
+            <tr>
+                <td>Varlık Adı</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Varlık Tutarı</td>
+                <td></td>
+                <td style="width: 25%">Varlık Tutarı (TP)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>İşlem Sonrası Bakiye Tutarı</td>
+                <td></td>
+                <td>İşlem Sonrası Bakiye Tutarı Para Birimi</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>İşlem Türü</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>İşlem Kanalı</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>İşlemin Yapıldığı Yer (Ülke/İl/İlçe)</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>İşlem Transfer Kodu <br>(Transaction ID)</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Alıcı Cüzdan Adresi/IBAN</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Gönderici Cüzdan Adresi/IBAN</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>İşlem Açıklaması</td>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+        <!-- #E- ŞÜPHELİ İŞLEM BİLGİLERİ -->
+
+        <!-- F- HESAP BİLGİLERİ -->
+        <p class="form-table-title">F- HESAP BİLGİLERİ <span>(Her bir hesap için bu alanı tekrarlayınız)</span></p>
+        <table>
+            <tr>
+                <td style="width: 38%">Hesap Türü</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Hesabın Bulunduğu Kuruluş</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Hesabın Bulunduğu Şube</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Hesap No</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>IBAN</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Hesabın Açılış Tarihi</td>
+                <td></td>
+                <td style="width: 20%">Kapanış Tarihi</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hesabın Son İşlem Tarihi</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Bakiye</td>
+                <td></td>
+                <td style="width: 20%">Bakiye (TP)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Hesabın Para Birimi</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Hesap Üzerinde Yasal Kısıtlama</td>
+                <td colspan="3">
+                    <span class="checkbox"></span>Var
+                    <span class="checkbox"></span>Yok
+                </td>
+            </tr>
+        </table>
+        <!-- #F- HESAP BİLGİLERİ -->
+
+    </div>
+    <!-- #Page 2 -->
+
+    <br>
+
+    <!-- Page 3 -->
+    <div class="page">
+
+        <p class="form-header">MSK-FRM-ŞİB-010-1.0</p>
+        <table>
+            <tr>
+                <td style="width: 38%">Yasal Kısıtlamanın Nedeni</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>Hesap Sahipleri</b>
+                    <table>
+                        <tr>
+                            <td>TCKN</td>
+                            <td>Vergi No</td>
+                            <td style="width: 70%">Ad/Unvan</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <br>
+                </td>
+            </tr>
+        </table>
+
+        <!-- G- SUÇA İLİŞKİN ŞÜPHE KATEGORİLERİ -->
+        <p class="form-table-title">G- SUÇA İLİŞKİN ŞÜPHE KATEGORİLERİ</span></p>
+        <table>
+            <tr>
+                <td style="width: 100%">
+                    <br>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+        <!-- #G- SUÇA İLİŞKİN ŞÜPHE KATEGORİLERİ -->
+
+        <!-- H- AÇIKLAMA -->
+        <p class="form-table-title">H- AÇIKLAMA</span></p>
+        <table>
+            <tr>
+                <td style="width: 100%">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+        <!-- #H- AÇIKLAMA -->
+
+        <div class="author">
+            <b>Bildirimi Yapanın</b>
+            <br>
+            <b>Adı-Soyadı-İmzası</b>
+        </div>
+
+    </div>
+    <!-- #Page 3 -->
+
+</body>
+
+</html>
